@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Krishna Sunkara</Authors>
+    <Description>Template web request processing framework for asp.net core applications. Using this framework, the excess implementation
+on controllers can be reduced totally.
+
+The source code repository can be found at https://github.com/kakathian/framex/.
+
+The sample project implemented using this framework is available at:
+
+Implemented Project: https://github.com/kakathian/framex/tree/master/Framex.Platform
+
+Implemented Processor: https://github.com/kakathian/framex/blob/master/Framex.Platform/Processors/ValuesProcessor.cs
+
+Usage: https://github.com/kakathian/framex/blob/master/Framex.Platform/Controllers/ValuesController.cs</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>.net core; asp.net core; c#; template; execution framework; framework; execution library;library; design pattern; execution pattern; asp.net core pattern; asp.net core design pattern; web request processing pattern; process pattern</PackageTags>
+    <PackageProjectUrl>https://github.com/kakathian/framex/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kakathian/framex/</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.abstractions\2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.logging.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
