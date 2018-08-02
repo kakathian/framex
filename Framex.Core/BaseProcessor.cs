@@ -66,7 +66,7 @@ namespace Framex.Core
             catch (Exception exception)
             {
                 this.Logger.LogError(exception, this.Name);
-                processorException = new ProcessorException("Request processesing failed", processorException);
+                processorException = new ProcessorException("Request processesing failed", exception);
             }
             finally
             {
