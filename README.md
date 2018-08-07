@@ -65,7 +65,8 @@ Sample usage:
     }
 ```
 
-`Registering Framex Processors with MVC:`
+
+Registering Framex Processors with MVC:
 
 Framex works as intended only if registered in the mvc startup as shown below:
 
