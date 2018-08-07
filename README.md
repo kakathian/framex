@@ -5,7 +5,7 @@ Framex was written in C# using .NET Core 2.0. This is targetted for to be used b
 
 The example project `https://github.com/kakathian/framex/tree/master/Framex.Platform` shows how to consume framex.core framework.
 
-https://github.com/kakathian/framex/blob/master/Framex.Platform/Commands/ValuesProcessor.cs shows how a processor is built using framex.core framework.
+https://github.com/kakathian/framex/blob/master/Framex.Platform/Processors/ValuesProcessor.cs shows how a processor is built using framex.core framework.
 
 Framex is inspired by template design pattern.
 https://github.com/kakathian/framex/blob/master/Framex.Core/BaseProcessor.cs class has `ProcessAsync` which actually
