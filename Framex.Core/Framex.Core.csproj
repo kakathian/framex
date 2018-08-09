@@ -17,14 +17,14 @@ Implemented Processor: https://github.com/kakathian/framex/blob/master/Framex.Pl
 
 Usage: https://github.com/kakathian/framex/blob/master/Framex.Platform/Controllers/ValuesController.cs</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>.net core; asp.net core; c#; template; execution framework; framework; execution library;library; design pattern; execution pattern; asp.net core pattern; asp.net core design pattern; web request processing pattern; process pattern</PackageTags>
+    <PackageTags>.netcore; asp.net; c#; template; execution; framework; library; design; pattern; core; web request processing; process; MediatR</PackageTags>
     <PackageProjectUrl>https://github.com/kakathian/framex/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kakathian/framex/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <PackageReleaseNotes>Fixed library versioning issues</PackageReleaseNotes>
+    <PackageReleaseNotes>Made framex services registration more intuitive. Moved registration of `FramexRequestParseFilter` to `RegisterFramexServices`. You may track the delta changes at `https://github.com/kakathian/framex/commit/10aff741910e04b5da2288ea4a5d28ab7b5c36aa#diff-33ffbef85d7e295b332f6ee8cf32a6a4R9`</PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

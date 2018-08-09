@@ -5,7 +5,7 @@ Framex was written in C# using .NET Core 2.0. This is targetted for to be used b
 
 The example project `https://github.com/kakathian/framex/tree/master/Framex.Platform` shows how to consume framex.core framework.
 
-https://github.com/kakathian/framex/blob/master/Framex.Platform/Commands/ValuesProcessor.cs shows how a processor is built using framex.core framework.
+https://github.com/kakathian/framex/blob/master/Framex.Platform/Processors/ValuesProcessor.cs shows how a processor is built using framex.core framework.
 
 Framex is inspired by template design pattern.
 https://github.com/kakathian/framex/blob/master/Framex.Core/BaseProcessor.cs class has `ProcessAsync` which actually
@@ -62,6 +62,32 @@ Sample usage:
             await _sampleProcessor.ProcessAsync();
             return _sampleProcessor.Response;
         }
+    }
+```
+
+
+Registering Framex Processors with MVC:
+
+Framex works as intended only if registered in the mvc startup as shown below:
+
+https://github.com/kakathian/framex/blob/769d2b5f77cf8d0be38e17fefd670e0bb0ebcc2a/Framex.Platform/Startup.cs#L30
+and 
+https://github.com/kakathian/framex/blob/769d2b5f77cf8d0be38e17fefd670e0bb0ebcc2a/Framex.Platform/Startup.cs#L33
+
+```
+public void ConfigureServices(IServiceCollection services)
+    {
+	    services.AddMvc(mvcOptions =>
+	    {
+	     //Framex: Must have this statement
+		mvcOptions.Filters.Add<FramexRequestParseFilter>();
+	    });
+
+	    //Framex: Must have this statement
+	    services.RegisterFramexServices();
+	    
+	    // Register your framex derived processors here
+	    services.AddTransient<ValuesProcessor, ValuesProcessor>();
     }
 ```
 							
