@@ -25,10 +25,10 @@ namespace Framex.Platform
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(mvcOptions =>
-            {
-                mvcOptions.Filters.Add<FramexRequestParseFilter>();
-            });
+            //services.AddMvc(mvcOptions =>
+            //{
+                 
+            //});
 
             services.RegisterFramexServices();
             // Register your framex derived processors here
